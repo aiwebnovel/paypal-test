@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import './App.css';
+import axios from 'axios';
 
 function App() {
   const { IMP } = window;
@@ -31,11 +32,6 @@ function App() {
         },
         async (rsp) => {
           console.log(rsp);
-          if (rsp.success === false) {
-            console.error(rsp.error_msg);
-          } else {
-            if (rsp.success) console.log('success');
-          }
 
           console.log('IMP LOADUI의 callback 호출');
         },
